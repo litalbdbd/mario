@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -27,7 +28,7 @@ img {
     width: 100%;
     background: gray;
     border-top: 11px solid rgb(170, 169, 169);
-    border-bottom: 12px solid rgb(170, 169, 169);
+    border-bottom: 11px solid rgb(170, 169, 169);
 }
 
 .lines {
@@ -44,7 +45,9 @@ img {
     left: 0px;
     top: 60%;
     animation-name: drive;
-    animation-duration: 5s;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-iteration-count: 3;
 }
 
 .luigi {
@@ -52,14 +55,16 @@ img {
     left: 0px;
     top: 75%;
     animation-name: drive;
-    animation-duration: 7s;
+    animation-duration: 6s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
 }
 
 @keyframes drive {
     from {
-        transform: translateX(0);
+        transform: translateX(-200px);
     }
     to {
-        transform: translateX(1245px);
+        transform: translateX(1400px);
     }
 }
